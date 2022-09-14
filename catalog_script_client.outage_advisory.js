@@ -7,7 +7,7 @@ function onChange(control, oldValue, newValue, isLoading) {
         var answer = serverResponse.responseXML.documentElement.getAttribute('answer');
         var outageInfo = JSON.parse(answer);
         var msg = '';
-        if (outageInfo.type) {
+        if (outageInfo && outageInfo.type) {
             if (outageInfo.task) {
                 msg += outageInfo.task + ": ";
             }
@@ -16,7 +16,7 @@ function onChange(control, oldValue, newValue, isLoading) {
                 msg += " Planned end time: " + outageInfo.end + ".";
             }
         }
-        if (outageInfo.message) {
+        if (outageInfo && outageInfo.message) {
             msg += " " + outageInfo.message;
         }
         if (msg) {
