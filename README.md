@@ -1,2 +1,2 @@
 # snCMDBOutageAdvisories
-Feature to advise ServiceNow portal users of ongoing outages when reporting incidents etc.
+Use the catalog client script to advise end users of any ongoing planned or unplanned outages or degradations relating to a CI/service they select in a record producer. Can be expanded according to business requirements, e.g., block further incident creation in case of an outage, or additionally advise of recent outages that have since ended to deflect latecomers from creating new incidents. 
